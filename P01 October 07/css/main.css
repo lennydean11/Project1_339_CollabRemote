@@ -1,0 +1,692 @@
+/*
+  STYLE GUIDE STYLING
+  Default styling for the style guide
+*/
+body {
+  margin: 0;
+  font-family: sans-serif;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+
+}
+
+code {
+  width: 400px;
+  height: 100px;
+  background-color: #EEE;
+  padding: 0.5rem;
+  display: block;
+
+}
+
+.element {
+  padding: 20px;
+  border-top-width: 0.15rem;
+  border-top-style: solid;
+  border-top-color: black;
+  display: flex;
+}
+
+h1 {
+
+  font-size: 30px;
+
+}
+
+h3{
+  width: 100px;
+  margin-right: 50px;
+}
+
+.fields h4 {
+  margin-left: 20px;
+
+  padding: 20px;
+  font-size: 14px;
+  color: grey;
+  font-style: italic;
+  transform: translateY(0%);
+}
+
+
+.para p {
+  margin: 20px;
+
+  font-size: 15px;
+  padding: 20px;
+}
+
+.para code{
+  margin: 20px;
+  height: 20px;
+  transform: translateY(30%);
+}
+
+.btns{
+
+  height: 60px;
+  transform: translate(-150%, 270%);
+}
+/*Style Guide basic styling*/
+
+/*color palette*/
+
+.containers{
+  display: flex;
+  padding-top: 30px;
+
+}
+.containers p{
+  padding: 15px 15px 10px 70px;
+  width: 400px;
+}
+.boxp{
+	width:120px;
+	height:120px;
+  margin: 10px;
+}
+
+.cp1{
+	background: rgb(219, 204, 181);
+}
+.cp2{
+	background: RGB(181, 104, 76);
+}
+.cp3{
+	background: RGB(131, 107, 79);
+}
+.cp4{
+  background: rgb(22, 44, 58);
+}
+/*color palette*/
+
+
+
+
+/*
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+/* Styling buttons */
+
+.btn{
+  background: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-family: Fauna One;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn1{
+  width: 120px;
+  max-height: 50px;
+  background: rgb(22, 44, 58);
+  color: rgb(219, 204, 181);
+  border-radius: 15px;
+  border: 2px solid rgb(219, 204, 181);
+}
+
+.btn2{
+  width: 120px;
+  max-height: 50px;
+  background: rgb(22, 44, 58);
+  color: white;
+  border-radius: 15px;
+  border: 0px;
+}
+
+.btn3{
+  background: rgb(219, 204, 181);
+  color: rgb(22, 44, 58);
+  border-radius: 15px;
+  border: 2px solid rgb(22, 44, 58);
+}
+
+.btn4{
+  color: #fff;
+}
+
+.btn4:hover{
+  color: rgb(22, 44, 58);
+}
+
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: rgb(22, 44, 58);
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.btn4::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+  height: 180%;
+}
+
+.btn4:hover::before{
+  height: 0%;
+}
+
+.btn4:focus{
+  background: rgb(22, 44, 58);
+}
+
+.btn3:hover{
+  color: RGB(181, 104, 76);
+  background: rgb(22, 44, 58);
+}
+
+/*[START]
+TEXT INPUT FIELD WITH LABEL
+based on https://www.youtube.com/watch?v=IxRJ8vplzAo */
+
+.textinput{
+  background: none;
+  transform: translate(-130%, 70%);
+}
+.form{
+  width: 300px;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  color: rgb(22, 44, 58);
+  font-family: fauna one;
+}
+
+.form input{
+  background: rgb(219, 204, 181);
+  width: 100%;
+  height: 100%;
+  color: black;
+  font-family: fauna one;
+  font-size: 14px;
+  padding-top: 15px;
+  border: none;
+  outline: none;
+}
+
+.form label{
+
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.form label::after{
+  content: "";
+  left: 0px;
+  bottom: -1px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid rgb(22, 44, 58);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content-name{
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+    /*animation & styling*/
+.form input:focus + .label-name .content-name, .form input:valid + .label-name .content-name{
+  transform: translateY(-150%);
+  font-family: fauna one;
+  font-size: 12px;
+  color: grey;
+}
+
+.form input:focus + .label-name::after, .form input:valid + .label-name::after{
+  transform: translateX(0%);
+}
+
+/*[END]
+TEXT INPUT FIELD WITH LABEL*/
+
+/*[START]
+RADIO BUTTON WITH LABEL*/
+
+.rcontainer{
+  display: flex;
+  height: 50px;
+  transform: translate(-150%, 350%);
+}
+
+.rcontainer input[type="radio"]{
+  display: none;
+}
+
+.rcontainer label{
+  position: relative;
+  color: rgb(22, 44, 58);
+  font-family: fauna one;
+  font-size: 15px;
+  border: 2px solid rgb(22, 44, 58);
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.rcontainer label::before{
+
+  content: "";
+  height: 15px;
+  width: 15px;
+  border: 1px solid rgb(22, 44, 58);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.rcontainer input[type="radio"]:checked+ label{
+  background-color: rgb(22, 44, 58);
+  color: white;
+}
+
+.rcontainer input[type="radio"]:checked + label::before{
+  height: 6px;
+  width: 6px;
+  border: 5px solid rgb(219, 204, 181);
+  background-color: rgb(22, 44, 58);
+}
+
+/*[END]
+RADIO BUTTON WITH LABEL*/
+
+
+/*[START]
+NUMBERED LIST*/
+.box{
+
+}
+
+/*[END]
+NUMBERED LIST*/
+
+/*
+  TEXT ELEMENTS -------------------
+*/
+.headings{
+  display: flex;
+  padding-top: 30px;
+  position: relative;
+}
+
+.wheadings{
+  font-family: Cinzel;
+  font-style: bold;
+  color: rgb(22, 44, 58);
+  margin-left: 120px;
+  padding-top: 0px;
+}
+
+.headings a{
+  padding: 20px 30px 30px 30px;
+}
+
+.h1{
+  font-size: 40px;
+}
+
+.h2{
+  font-size: 35px;
+}
+
+.h3{
+  font-size: 30px;
+}
+
+.h4{
+  font-size: 23px;
+  font-style: italic;
+}
+
+.paragraphs{
+  display: flex;
+  padding-top: 30px;
+}
+
+.p1{
+  width: 400px;
+  font-family: fauna one;
+  color: rgb(22, 44, 58);
+  margin-left: 100px;
+  box-sizing: border-box;
+
+  padding: 20px 30px 30px 30px;
+}
+
+.p2{
+
+  color: grey;
+  width: 400px;
+  font-style: italic;
+  padding: 20px 30px 30px 30px;
+  font-size: 16px;
+}
+
+
+.box2{
+  width: 300px;
+}
+
+.box2 h2{
+  font-family: Brandon grotesque;
+  color: white;
+  background: rgb(22, 44, 58);
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 300;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.box2 .imgBox{
+  position: relative;
+  overflow: hidden;
+}
+.box2 .imgBox img{
+  max-width: 100%;
+  transition: transform 2s;
+}
+.box2:hover .imgBox img{
+  transform: scale(1.2);
+}
+
+.imglink{
+  margin-top: 50px;
+  display: flex;
+}
+
+.icons{
+  margin: 0px 50px 20px 200px;
+  height: 100px;
+  width: 300px;
+  padding-left: 10px;
+}
+
+.icons img{
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 55px 20px 30px 10px;
+}
+
+}
+
+.box{
+  width: 300px;
+  font-family: fauna one;
+}
+.box h2{
+  font-family: Brandon grotesque;
+  color: white;
+  background: rgb(22, 44, 58);
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 300;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.box ul{
+  position: relative;
+  background: #fff;
+
+}
+
+.box ul li{
+  list-style: none;
+  padding: 10px;
+  width: 100%;
+  background: RGB(219, 204, 181);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+}
+
+.box ul li:hover{
+  transform: scale(1.1);
+  z-index: 100;
+  background: rgb(181, 104, 76);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.box ul li span{
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  background: rgb(22, 44, 58);
+  color: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  transform: translateY(-20px);
+}
+
+
+/*
+  COMBINED ELEMENTS -------------------
+*/
+/*[START]
+NAVIGATION BAR*/
+
+.navcontainer {
+	width: 80%;
+  margin: 0 auto;
+
+}
+
+.header {
+  box-sizing: border-box;
+  background: rgb(22, 44, 58);
+  padding: 50px;
+}
+
+.header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  font-family: Cinzel;
+  color: white;
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  font-family: Brandon Grotesque;
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+  position: relative;
+}
+
+nav a {
+  color: RGB(219, 204, 181);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: RGB(181, 104, 76);
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: RGB(181, 104, 76);
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+/*[END]
+NAVIGATION BAR*/
+
+/*[START]
+PRODUCT LISTING */
+
+.pcontainer{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  width: 80vw;
+  background-color: none;
+  border-radius: 20px;
+
+}
+.card{
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  border-radius: 8px;
+  display: flex;
+  box-sizing: border-box;
+}
+.card h2{
+  display: flex;
+  flex-direction: row;
+}
+.card .images, .card .infos{
+  width: 50%;
+}
+
+.infos .price{
+  display: flex;
+}
+.infos .more-infos{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+.infos{
+  box-sizing: border-box;
+  background: rgb(219, 204, 181);
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 70px 50px 60px 20px;
+}
+.infos h2{
+  color: rgb(22, 44, 58);
+  font-family: Brandon Grotesque;
+  font-style: bold;
+  font-size: 40px;
+
+}
+.infos h5{
+  color: RGB(181, 104, 76);
+  transform: translate(0%, -200%);
+}
+.infos h6{
+  color: grey;
+  font-family: fauna one;
+  font-style: light;
+  font-size: 10px;
+  transform: translate(0%, -500%);
+
+}
+.infos p{
+
+  font-family: fauna one;
+  line-height: 20px;
+  width: 100%;
+  transform: translate(0%, -70%);
+}
+
+.buttons .btn3{
+  width: 100px;
+  height: 30px;
+  font-family: fauna one;
+  transform: translate(0%, -230%);
+}
+.images{
+  box-sizing: border-box;
+  height: 80%;
+  display: flex;
+  background: rgb(22, 44, 58);
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border: 30px solid RGB(181, 104, 76);
+}
+
+/*[END]
+PRODUCT LISTING*/
+
+/*[START]
+PAYMENT FORM */
+.wrapper{
+  width: 100%;
+  padding: 0px;
+}
+
+.pfcontainer{
+  max-width: 500px;
+  height: auto;
+  margin: 0px auto;
+  background: rgb(219, 204, 181);
+  padding: 20px 40px 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top: 10px solid RGB(181, 104, 76);
+}
+
+.title{
+  text-align: center;
+  font-family: Brandon-Grotesque;
+  font-style: bold;
+  font-size: 20px;
+  color: rgb(22, 44, 58);
+}
+
+.pfcontainer .btn3{
+  transform: translateY(-100%);
+  width: 15%;
+  float: right;
+}
+
+
+
+/*[END]
+PAYMENT FORM */
